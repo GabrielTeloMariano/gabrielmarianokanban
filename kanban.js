@@ -87,19 +87,6 @@ document.getElementById("task-form").addEventListener("submit", function (event)
     newTask.setAttribute('draggable', 'true');
     newTask.dataset.status = status;
 
-    newTask.innerHTML = `
-        <h4>${title}</h4>
-        <p>${description}</p>
-        <p><strong>Prioridade:</strong> ${priority}</p>
-        <p><strong>Data de Vencimento:</strong> ${dueDate}</p>
-        <p><strong>Responsáveis:</strong> ${responsible}</p>
-        <p><strong>Status:</strong> ${status}</p>
-        <div class="button-container">
-            <button class="edit-task-btn">Editar</button>
-            <button class="delete-task-btn">Excluir</button>
-        </div>
-    `;
-
     const statusColumn = document.getElementById(status);
     if (statusColumn) {
         statusColumn.appendChild(newTask);
